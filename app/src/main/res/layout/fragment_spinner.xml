@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".spinner.SpinnerFragment">
+
+    <TextView
+        android:id="@+id/SpinnerText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Spinner"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Spinner
+        android:id="@+id/SpinnerHospital"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/SpinnerText"/>
+
+    <Button
+        android:id="@+id/btnChooseHospital"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose Hospital"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/SpinnerHospital"/>
+
+    <TextView
+        android:id="@+id/txtSpinnerResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintTop_toBottomOf="@id/btnChooseHospital"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

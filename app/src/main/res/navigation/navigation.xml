@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/hospitalListFragment">
+
+    <fragment
+        android:id="@+id/hospitalListFragment"
+        android:name="com.example.hospitalapp.hospitallist.HospitalListFragment"
+        android:label="fragment_hospital_list"
+        tools:layout="@layout/fragment_hospital_list" >
+        <action
+            android:id="@+id/action_hospitalListFragment_to_hospitalDetailsFragment"
+            app:destination="@id/hospitalDetailsFragment"
+            app:popUpTo="@id/hospitalListFragment" />
+        <action
+            android:id="@+id/action_hospitalListFragment_to_spinnerFragment"
+            app:destination="@id/spinnerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/hospitalDetailsFragment"
+        android:name="com.example.hospitalapp.hospitaldetails.HospitalDetailsFragment"
+        android:label="fragment_hospital_details"
+        tools:layout="@layout/fragment_hospital_details" >
+        <argument
+            android:name="hospitalID"
+            app:argType="integer"/>
+    </fragment>
+    <fragment
+        android:id="@+id/spinnerFragment"
+        android:name="com.example.hospitalapp.spinner.SpinnerFragment"
+        android:label="fragment_spinner"
+        tools:layout="@layout/fragment_spinner" />
+
+</navigation>
